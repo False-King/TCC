@@ -7,6 +7,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private BoxCollider2D boxCollider2d;
+
+    
     public float speed;
     public float jumpforce;
     public bool isJumping;
