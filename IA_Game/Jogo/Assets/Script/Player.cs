@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     {
         move();
         jump();
+        detectDeath();
     }
 
     void move()
@@ -77,19 +78,27 @@ public class Player : MonoBehaviour
         }
     }
 
+    void detectDeath()
+    {
+        if(transform.position.y<=-20)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+    }
+
     void OnCollisionEnter2D (Collision2D collision)
     {
         if(collision.gameObject.layer == 8)
         {
             isJumping = false;
         }
+        if(collision.gameObject.tag == "Finish")
+        {
+            Application.LoadLevel(Application.loadedLevel);
+            print("aaaaaaaaaaaaaa");
+        }
+
     }
 
-    void OnCollisionExit2D (Collision2D collision)
-    {
-        if(collision.gameObject.layer == 8)
-        {
-            isJumping = true;
-        }
-    }
+    
 }
