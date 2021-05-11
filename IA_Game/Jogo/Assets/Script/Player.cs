@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isJumping = false;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -92,16 +93,25 @@ public class Player : MonoBehaviour
         {
             isJumping = false;
         }
-        else
-        {
-            isJumping = true;
-        }
         if(collision.gameObject.tag == "Finish")
         {
             Application.LoadLevel(Application.loadedLevel);
             print("aaaaaaaaaaaaaa");
         }
+        if(collision.gameObject.tag == "Enemy")
+        {
+            isJumping = false;
+            Application.LoadLevel(Application.loadedLevel);
+        }
 
+    }
+
+    void OnCollisionExit2D (Collision2D collision)
+    {
+        if(collision.gameObject.layer == 8)
+        {
+            isJumping = true;
+        }
     }
 
     
