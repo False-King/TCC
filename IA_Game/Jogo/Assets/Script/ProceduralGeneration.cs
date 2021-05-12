@@ -15,9 +15,11 @@ public class ProceduralGeneration : MonoBehaviour
     }
     void generation()
     {
-        for (int x = 0; x<pontos; x++)
+        setNewHeight();
+        for (int x = 5; x<pontos; x=x+5)
         {
             Instantiate(bloco, new Vector2(x, height), Quaternion.identity);
+            setNewHeight();
         }
     }
 
@@ -25,5 +27,10 @@ public class ProceduralGeneration : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void setNewHeight()
+    {
+        height=height+Random.Range(-5, 5);
     }
 }
