@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637562805485333262
+      ticks: 637562840767166714
     m_Hash: 127026619
   m_LockFileStatus:
     m_FilePath: C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637562805715403118
+      ticks: 637562840883805393
     m_Hash: 4047100667
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
