@@ -7,7 +7,7 @@ public class ProceduralGeneration : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] int pontos, height;
-    [SerializeField] GameObject bloco, final;
+    [SerializeField] GameObject bloco, final, inimigo;
     void Start()
     {
         generation();
@@ -15,11 +15,14 @@ public class ProceduralGeneration : MonoBehaviour
     }
     void generation()
     {
-        for (int x = 5; x<pontos-16; x+=8)
+        for (int x = 7; x<pontos-16; x+=8)
         {   
             setNewHeight();
             Instantiate(bloco, new Vector2(x, height), Quaternion.identity);
-
+            if(Random.Range(0, 10)>=7)
+            {
+                Instantiate(inimigo, new Vector2(x, height), Quaternion.identity);
+            }
         }
         Instantiate(final, new Vector2(pontos, height), Quaternion.identity);
     }
