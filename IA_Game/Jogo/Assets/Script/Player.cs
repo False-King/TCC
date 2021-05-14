@@ -114,5 +114,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    void Win()
+    {
+        
+    }
+
     
 }
