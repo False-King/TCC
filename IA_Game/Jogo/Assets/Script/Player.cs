@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+using System;
 
 
 
@@ -15,6 +18,8 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rig;
     private Animator anim;
+    // Leitura do Arquivo
+
     
     // Start is called before the first frame update
     void Start()
@@ -95,13 +100,25 @@ public class Player : MonoBehaviour
         }
         if(collision.gameObject.tag == "Finish")
         {
+            string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
+            int score = Convert.ToInt32(scoreTxt);
+            score+=50;
+            File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
             Application.LoadLevel(Application.loadedLevel);
-            print("aaaaaaaaaaaaaa");
+
         }
         if(collision.gameObject.tag == "Enemy")
-        {
+        {   
+            string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
+            int score = Convert.ToInt32(scoreTxt);
             isJumping = false;
+            score-=15;
+            File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
+            if (score<0){
+                score=0;
+            }
             Application.LoadLevel(Application.loadedLevel);
+           
         }
 
     }
