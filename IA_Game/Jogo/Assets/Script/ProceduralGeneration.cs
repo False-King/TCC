@@ -8,7 +8,8 @@ using System.IO;
 public class ProceduralGeneration : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] int height, x=37;
+    [SerializeField] int height,pont;
+    int x=32,pequeno,grande,difInimigo;
     int pontos =  System.Convert.ToInt32(System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt"));
     [SerializeField] GameObject bloco, final, inimigo, blocoP, blocoG;
     void Start()
@@ -17,15 +18,13 @@ public class ProceduralGeneration : MonoBehaviour
     }
     void generation()
     {
+        checkDificuldade();
         //for (x = 37; x<pontos; x+=8)
-        while(x<pontos)
+        while(pont<pontos)
         {   
             setNewHeight();
             setPlat();
-            if(Random.Range(0, 10)>=7)
-            {
-                Instantiate(inimigo, new Vector2(x-32, height), Quaternion.identity);
-            }
+
         }
         setNewHeight();
         Instantiate(final, new Vector2(x, height), Quaternion.identity);
@@ -51,22 +50,59 @@ public class ProceduralGeneration : MonoBehaviour
     //criação de uma plataforma aleatória
     void setPlat()
     {
-        if(Random.Range(0, 10)>=8){
+        if(Random.Range(0, 10)>=pequeno){
+
             Instantiate(blocoP, new Vector2(x, height), Quaternion.identity);
-            x+=4;
+
+            if(Random.Range(0, 10)>=difInimigo)
+            {
+                Instantiate(inimigo, new Vector2(x-20, height), Quaternion.identity);
+            }
+
+            x+=6;
+            pont+=15;
         }
-        else if(Random.Range(0, 10)<=2){
+        else if(Random.Range(0, 10)<=grande){
+            
             Instantiate(blocoG, new Vector2(x, height), Quaternion.identity);
-            x+=14;
+
+            if(Random.Range(0, 10)>=difInimigo)
+            {
+                Instantiate(inimigo, new Vector2(x-20, height), Quaternion.identity);
+            }
+
+            x+=10;
+            pont+=5;
         }
         else{
+
             Instantiate(bloco, new Vector2(x, height), Quaternion.identity);
+
+            if(Random.Range(0, 10)>=difInimigo)
+            {
+                Instantiate(inimigo, new Vector2(x-20, height), Quaternion.identity);
+            }
+
             x+=8;
+            pont+=10;
         }
     }
 
-    void setTrap()
-    {
-
+    void checkDificuldade()
+    {   
+        if(pontos<=30){
+            difInimigo = 10;
+            grande = 6;
+            pequeno = 10;
+        }else if(pontos>100){
+            difInimigo = 5;
+            grande = 1;
+            pequeno = 6;
+        }else
+        {
+            difInimigo = 8;
+            grande = 3;
+            pequeno = 9;
+        }
     }
 }

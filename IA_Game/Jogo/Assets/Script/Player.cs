@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     void move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime *speed;
+        transform.position += movement * Time.deltaTime * speed;
 
         if(Input.GetAxis("Horizontal") > 0f)
         {
@@ -88,6 +88,11 @@ public class Player : MonoBehaviour
     {
         if(transform.position.y<=-20)
         {
+            string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
+            int score = Convert.ToInt32(scoreTxt);
+            isJumping = false;
+            score-=5;
+            File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
             Application.LoadLevel(Application.loadedLevel);
         }
     }
@@ -95,14 +100,14 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D (Collision2D collision)
     {
         if(collision.gameObject.layer == 8)
-        {
+        {   
             isJumping = false;
         }
         if(collision.gameObject.tag == "Finish")
         {
             string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
             int score = Convert.ToInt32(scoreTxt);
-            score+=50;
+            score+=15;
             File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
             Application.LoadLevel(Application.loadedLevel);
 
@@ -112,7 +117,7 @@ public class Player : MonoBehaviour
             string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
             int score = Convert.ToInt32(scoreTxt);
             isJumping = false;
-            score-=15;
+            score-=5;
             File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
             if (score<0){
                 score=0;
