@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpforce;
     public bool isJumping;
+    public bool doubleJump;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         isJumping = false;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        doubleJump = true;
     }
 
     // Update is called once per frame
@@ -60,11 +62,23 @@ public class Player : MonoBehaviour
 
     void jump()
     {
-        if(Input.GetButtonDown("Jump") && isJumping==false)
+        if(Input.GetButtonDown("Jump"))
         {
-            rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
+            if(!isJumping)
+            {
+                rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
+                doubleJump = true;
+            }
+            else
+            {
+                if(doubleJump)
+                {
+                    rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
+                    doubleJump = false;
+                }
+            }
         }
-        if(isJumping==true)
+        else if(isJumping==true)
         {
             if(Input.GetAxis("Vertical") >= 0f)
             {
