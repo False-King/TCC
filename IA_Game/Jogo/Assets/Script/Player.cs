@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpforce;
     public bool isJumping;
-    public bool doubleJump;
+    public bool doubleJump = false,hasDoubleJump = false;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -28,7 +28,9 @@ public class Player : MonoBehaviour
         isJumping = false;
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        if(hasDoubleJump){
         doubleJump = true;
+        }
     }
 
     // Update is called once per frame
@@ -61,40 +63,73 @@ public class Player : MonoBehaviour
     }
 
     void jump()
-    {
-        if(Input.GetButtonDown("Jump"))
-        {
-            if(!isJumping)
+    {   
+        if(hasDoubleJump)
+        {            
+            if(Input.GetButtonDown("Jump"))
             {
-                rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
-                doubleJump = true;
-            }
-            else
-            {
-                if(doubleJump)
+                if(!isJumping)
                 {
                     rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
-                    doubleJump = false;
+                    doubleJump = true;
+                }
+                else
+                {
+                    if(doubleJump)
+                    {
+                        rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
+                        doubleJump = false;
+                    }
                 }
             }
-        }
-        else if(isJumping==true)
-        {
-            if(Input.GetAxis("Vertical") >= 0f)
+            else if(isJumping==true)
             {
-                anim.SetBool("Jump", true);
-                anim.SetBool("Fall", false);
+                if(Input.GetAxis("Vertical") >= 0f)
+                {
+                    anim.SetBool("Jump", true);
+                    anim.SetBool("Fall", false);
+                }
+                if(rig.velocity.y < -0.1)
+                {
+                    anim.SetBool("Jump", false);
+                    anim.SetBool("Fall", true);
+                }
             }
-            if(rig.velocity.y < -0.1)
+            if(isJumping == false)
             {
                 anim.SetBool("Jump", false);
-                anim.SetBool("Fall", true);
+                anim.SetBool("Fall", false);
             }
-        }
-        if(isJumping == false)
+        }   
+        
+        if(!hasDoubleJump)
         {
-            anim.SetBool("Jump", false);
-            anim.SetBool("Fall", false);
+            if(Input.GetButtonDown("Jump"))
+            {
+                if(!isJumping)
+                {
+                    rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
+                    doubleJump = true;
+                }
+                else if(isJumping==true)
+                {
+                    if(Input.GetAxis("Vertical") >= 0f)
+                    {
+                        anim.SetBool("Jump", true);
+                        anim.SetBool("Fall", false);
+                    }
+                    if(rig.velocity.y < -0.1)
+                    {
+                        anim.SetBool("Jump", false);
+                        anim.SetBool("Fall", true);
+                    }
+                }
+                if(isJumping == false)
+                {
+                    anim.SetBool("Jump", false);
+                    anim.SetBool("Fall", false);
+                }
+            }
         }
     }
 
