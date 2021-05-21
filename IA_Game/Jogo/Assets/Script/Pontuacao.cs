@@ -17,8 +17,6 @@ public class Pontuacao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
         pontuacao.text = "Pontuação: " + Player.score;
     }
 }

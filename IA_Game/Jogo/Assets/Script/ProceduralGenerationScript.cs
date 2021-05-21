@@ -80,7 +80,8 @@ public class ProceduralGenerationScript : MonoBehaviour
 
                 if(Random.Range(0, 10)>=difInimigo)
                 {
-                    Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma.transform.parent = contaninerPlataforma.transform;
                     z+=5;
                 }
                 else
@@ -99,7 +100,8 @@ public class ProceduralGenerationScript : MonoBehaviour
 
                 if(Random.Range(0, 10)>=difInimigo)
                 {
-                    Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
                 z+=12;
             }
@@ -112,7 +114,8 @@ public class ProceduralGenerationScript : MonoBehaviour
 
                 if(Random.Range(0, 10)>=difInimigo)
                 {
-                    Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
                 z+=8;
                 
