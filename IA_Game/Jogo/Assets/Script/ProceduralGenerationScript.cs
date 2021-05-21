@@ -11,15 +11,14 @@ public class ProceduralGenerationScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] public int height,pont;
-    public int x=32,pequeno,grande,difInimigo,tamanho, comprimento=50,distancia=10;
+    public int x=32,tamanho, comprimento=50,distancia=10;
+    public float pequeno,grande,difInimigo;
     public static bool  destroy;
-    public int pontos =  System.Convert.ToInt32(System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt"));
+    public int pontos =  Player.score;
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
     void Start()
     {
-        
         criarPlataform();
-
     }
     void Update()
     {
@@ -80,7 +79,7 @@ public class ProceduralGenerationScript : MonoBehaviour
 
                 if(Random.Range(0, 10)>=difInimigo)
                 {
-                    Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                     z+=distancia-1;
                 }
@@ -100,7 +99,7 @@ public class ProceduralGenerationScript : MonoBehaviour
 
                 if(Random.Range(0, 10)>=difInimigo)
                 {
-                    Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
                 z+=distancia+3;
@@ -114,7 +113,7 @@ public class ProceduralGenerationScript : MonoBehaviour
 
                 if(Random.Range(0, 10)>=difInimigo)
                 {
-                    Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
                 z+=distancia;

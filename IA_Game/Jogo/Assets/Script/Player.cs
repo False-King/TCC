@@ -17,9 +17,8 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpforce;
     public bool isJumping;
-    public static int score=0;
+    public static int score=0, hp=3;
     public bool doubleJump = false,hasDoubleJump;
-
     private Rigidbody2D rig;
     private Animator anim;
     // Leitura do Arquivo
@@ -41,7 +40,9 @@ public class Player : MonoBehaviour
     {
         move();
         jump();
+        anima();
         detectDeath();
+
     }
 
     void move()
@@ -85,26 +86,7 @@ public class Player : MonoBehaviour
                     }
                 }
             }
-            else if(isJumping==true)
-            {
-                if(Input.GetAxis("Vertical") >= 0f)
-                {
-                    anim.SetBool("Jump", true);
-                    anim.SetBool("Fall", false);
-                }
-                if(rig.velocity.y < -0.1)
-                {
-                    anim.SetBool("Jump", false);
-                    anim.SetBool("Fall", true);
-                }
-            }
-            if(isJumping == false)
-            {
-                anim.SetBool("Jump", false);
-                anim.SetBool("Fall", false);
-            }
-        }   
-        
+        }
         if(!hasDoubleJump)
         {
             if(Input.GetButtonDown("Jump"))
@@ -114,28 +96,10 @@ public class Player : MonoBehaviour
                     rig.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
                     doubleJump = true;
                 }
-                else if(isJumping==true)
-                {
-                    if(Input.GetAxis("Vertical") >= 0f)
-                    {
-                        anim.SetBool("Jump", true);
-                        anim.SetBool("Fall", false);
-                    }
-                    if(rig.velocity.y < -0.1)
-                    {
-                        anim.SetBool("Jump", false);
-                        anim.SetBool("Fall", true);
-                    }
-                }
-                if(isJumping == false)
-                {
-                    anim.SetBool("Jump", false);
-                    anim.SetBool("Fall", false);
-                }
             }
         }
+        
     }
-
     void detectDeath()
     {
         if(transform.position.y<=-20)
@@ -144,30 +108,42 @@ public class Player : MonoBehaviour
             score-=5;
             if(score<0){
                 score = 0;
-            }
-            
-            transform.position = new Vector2(-5,10);
-            
+            }        
+            transform.position = new Vector2(-5,10); 
             ProceduralGenerationScript.destroy = true;
+            hp=3;
         }
+       
     }
 
     void OnCollisionEnter2D (Collision2D collision)
     {
         if(collision.gameObject.layer == 8)
         {   
+
             isJumping = false;
+
         }
         if(collision.gameObject.tag == "Finish")
         {
-            score+=15;
 
+            score+=15;
+            isJumping = false;
             transform.position = new Vector2(-5,10);
             ProceduralGenerationScript.destroy = true;
+            hp = 3;
 
         }
         if(collision.gameObject.tag == "Enemy")
-        {   
+        {
+            if(hp>1){
+                hp--;
+                rig.AddForce(new Vector2(0, 1.5f), ForceMode2D.Impulse);
+               
+
+            }else
+            {
+
             isJumping = false;
             score-=5;
 
@@ -175,8 +151,9 @@ public class Player : MonoBehaviour
                 score=0;
             }
             transform.position = new Vector2(-5,10);
-            ProceduralGenerationScript.destroy = true;
-           
+            ProceduralGenerationScript.destroy = true; 
+            hp=3;  
+            }
         }
 
     }
@@ -189,10 +166,27 @@ public class Player : MonoBehaviour
         }
     }
 
-    void Win()
+    void anima()
     {
+        if(Input.GetAxis("Vertical") >= 0f)
+        {
+            anim.SetBool("Jump", true);
+            anim.SetBool("Fall", false);
+        }
+        if(rig.velocity.y < -0.1)
+        {
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fall", true);
+        }
         
+        if(isJumping == false)
+        {
+            anim.SetBool("Jump", false);
+            anim.SetBool("Fall", false);
+        }
     }
 
+}  
+
     
-}
+
