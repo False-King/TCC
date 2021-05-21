@@ -19,7 +19,7 @@ public class Camera : MonoBehaviour
         {
             transform.position = new Vector3(Player.position.x-2, 0, -10);
         }
-        if(Player.position.x+5 < CameraPosition.position.x)
+        if(Player.position.x+4 < CameraPosition.position.x)
         {
             transform.position = new Vector3(Player.position.x +5, 0, -10);
         }

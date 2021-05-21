@@ -10,12 +10,15 @@ using System;
 public class Player : MonoBehaviour
 {
     private BoxCollider2D boxCollider2d;
-
+    public Transform respawnPoint;
+    [SerializeField] GameObject PlayerZ;
+    
     
     public float speed;
     public float jumpforce;
     public bool isJumping;
-    public bool doubleJump = false,hasDoubleJump = false;
+    public static int score=0;
+    public bool doubleJump = false,hasDoubleJump;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -137,12 +140,15 @@ public class Player : MonoBehaviour
     {
         if(transform.position.y<=-20)
         {
-            string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
-            int score = Convert.ToInt32(scoreTxt);
             isJumping = false;
             score-=5;
-            File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
-            Application.LoadLevel(Application.loadedLevel);
+            if(score<0){
+                score = 0;
+            }
+            
+            transform.position = new Vector2(-5,10);
+            
+            ProceduralGenerationScript.destroy = true;
         }
     }
 
@@ -154,24 +160,22 @@ public class Player : MonoBehaviour
         }
         if(collision.gameObject.tag == "Finish")
         {
-            string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
-            int score = Convert.ToInt32(scoreTxt);
             score+=15;
-            File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
-            Application.LoadLevel(Application.loadedLevel);
+
+            transform.position = new Vector2(-5,10);
+            ProceduralGenerationScript.destroy = true;
 
         }
         if(collision.gameObject.tag == "Enemy")
         {   
-            string scoreTxt = System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt");   
-            int score = Convert.ToInt32(scoreTxt);
             isJumping = false;
             score-=5;
-            File.WriteAllText("../Jogo/Assets/Save/Score.txt", Convert.ToString(score));
+
             if (score<0){
                 score=0;
             }
-            Application.LoadLevel(Application.loadedLevel);
+            transform.position = new Vector2(-5,10);
+            ProceduralGenerationScript.destroy = true;
            
         }
 

@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers);
+        detectDeath();
     }
 
     private void FixedUpdate()
@@ -37,6 +38,17 @@ public class Enemy : MonoBehaviour
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
         }
     }
+
+     void detectDeath()
+    {
+        if(transform.position.y<=-20)
+        {
+
+            Destroy(gameObject);
+
+        }
+    }
+
 
     
 }
