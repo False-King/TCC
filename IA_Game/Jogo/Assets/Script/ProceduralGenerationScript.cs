@@ -10,15 +10,19 @@ using System.Threading.Tasks;
 public class ProceduralGenerationScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    int comprimento=180;
     [SerializeField] public int height,pont;
-    public int x=32,tamanho, comprimento=50,distancia=10;
-    public float pequeno,grande,difInimigo;
+    public int x=32,tamanho,distancia=10,posicaoPlayer;
+    public float pequeno,grande,difInimigo,porcentagemDistancia;
     public static bool  destroy;
     public int pontos =  Player.score;
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
+
+    
     void Start()
     {
         criarPlataform();
+        
     }
     void Update()
     {
@@ -26,6 +30,7 @@ public class ProceduralGenerationScript : MonoBehaviour
             DestroyPlataform();
             
             criarPlataform();
+            distanciaPercorrida();
         }
         
     }
@@ -133,6 +138,13 @@ public class ProceduralGenerationScript : MonoBehaviour
         foreach (Transform child in contaninerPlataforma.transform) plataformas.Add(child.gameObject);
         plataformas.ForEach(child => Destroy(child));
         destroy = false;
+    }
+
+    public void distanciaPercorrida()
+    {
+        int distanciaTotal = comprimento+12;
+        porcentagemDistancia = Player.deathPosition/distanciaTotal;
+        print(porcentagemDistancia.ToString());
     }
 }
 

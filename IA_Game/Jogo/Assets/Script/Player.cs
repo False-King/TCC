@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public Transform respawnPoint;
     [SerializeField] GameObject PlayerZ;
     
-    
+    public static float deathPosition=1;
     public float speed;
     public float jumpforce;
     public bool isJumping;
@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
     }
     void detectDeath()
     {
+        deathPosition=this.transform.position.x;
         if(transform.position.y<=-20)
         {
             isJumping = false;

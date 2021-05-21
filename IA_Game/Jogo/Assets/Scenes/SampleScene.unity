@@ -341,11 +341,12 @@ MonoBehaviour:
   pont: 0
   x: 32
   tamanho: 0
-  comprimento: 50
   distancia: 5
+  posicaoPlayer: 0
   pequeno: 0
   grande: 0
   difInimigo: 0
+  porcentagemDistancia: 0
   pontos: 435
   bloco: {fileID: 1932807722}
   final: {fileID: 1382350673}
