@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {   
+    
     public float speed = 3f;
     public Rigidbody2D rb;
     public LayerMask groundLayers;
@@ -47,6 +48,23 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
 
         }
+    }
+    void OnCollisionEnter2D (Collision2D collision)
+    {        
+        if(collision.gameObject.tag == "Enemy")
+        {   
+            if(isFacingRight)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
+            isFacingRight = !isFacingRight;
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1f);
+        }
+
     }
 
 

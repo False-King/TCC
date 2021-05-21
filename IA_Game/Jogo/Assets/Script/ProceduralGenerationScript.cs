@@ -11,7 +11,7 @@ public class ProceduralGenerationScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] public int height,pont;
-    public int x=32,pequeno,grande,difInimigo,tamanho;
+    public int x=32,pequeno,grande,difInimigo,tamanho, comprimento=50,distancia=10;
     public static bool  destroy;
     public int pontos =  System.Convert.ToInt32(System.IO.File.ReadAllText("../Jogo/Assets/Save/Score.txt"));
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
@@ -39,7 +39,7 @@ public class ProceduralGenerationScript : MonoBehaviour
         else if(height>=4)
             height=height+Random.Range(-4, 0);
         else
-            height=height+Random.Range(-4, 4);
+            height=height+Random.Range(-4, 2);
     }
 
     void checkDificuldade()
@@ -67,13 +67,13 @@ public class ProceduralGenerationScript : MonoBehaviour
 
         checkDificuldade();
 
-        while(z<pontos)
+        while(z<comprimento)
         {   
             setNewHeight();
             if(Random.Range(0, 10)>=pequeno)
             {
 
-                Plataforma = Instantiate(blocoP, new Vector2(z+34, height), Quaternion.identity);
+                Plataforma = Instantiate(blocoP, new Vector2(z+32, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
                 j++;
@@ -82,18 +82,18 @@ public class ProceduralGenerationScript : MonoBehaviour
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
-                    z+=5;
+                    z+=distancia-1;
                 }
                 else
                 {
-                    z+=7;
+                    z+=distancia;
                 }
 
             }
             else if(Random.Range(0, 10)<=grande)
             {
             
-                Plataforma = Instantiate(blocoG, new Vector2(z+34, height), Quaternion.identity);
+                Plataforma = Instantiate(blocoG, new Vector2(z+32, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
                 j++;
@@ -103,11 +103,11 @@ public class ProceduralGenerationScript : MonoBehaviour
                     Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
-                z+=12;
+                z+=distancia+3;
             }
             else{
 
-                Plataforma = Instantiate(bloco, new Vector2(z+34, height), Quaternion.identity);
+                Plataforma = Instantiate(bloco, new Vector2(z+32, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
                 j++;
@@ -117,13 +117,13 @@ public class ProceduralGenerationScript : MonoBehaviour
                     Plataforma = Instantiate(inimigo, new Vector2(z+15, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
-                z+=8;
+                z+=distancia;
                 
             }
         }
         
         setNewHeight();
-        Plataforma = Instantiate(final, new Vector2(z+35, height), Quaternion.identity);
+        Plataforma = Instantiate(final, new Vector2(z+32, height), Quaternion.identity);
         Plataforma.transform.parent = contaninerPlataforma.transform;
         Plataforma.name = "Final Oficial";
 
