@@ -252,7 +252,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50265806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.17, y: -3.63, z: 0}
+  m_LocalPosition: {x: -6.173, y: -3.855, z: 0}
   m_LocalScale: {x: 2.8246424, y: 2.8026354, z: 0.8864}
   m_Children: []
   m_Father: {fileID: 0}
@@ -347,7 +347,7 @@ MonoBehaviour:
   grande: 0
   difInimigo: 0
   porcentagemDistancia: 0
-  pontos: 435
+  pontos: 5
   bloco: {fileID: 1932807722}
   final: {fileID: 1382350673}
   inimigo: {fileID: 145389919}

@@ -17,8 +17,8 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpforce;
     public bool isJumping;
-    public static int score=0, hp=3;
-    public bool doubleJump = false,hasDoubleJump;
+    public static int score=0, hp=3,consecutiveFallDeath=0,consecutiveVictory=0;
+    public bool doubleJump = false,hasDoubleJump=false;
     private Rigidbody2D rig;
     private Animator anim;
     // Leitura do Arquivo
@@ -102,17 +102,21 @@ public class Player : MonoBehaviour
     }
     void detectDeath()
     {
-        deathPosition=this.transform.position.x;
         if(transform.position.y<=-20)
         {
             isJumping = false;
             score-=5;
+            deathPosition=this.transform.position.x;
+            consecutiveFallDeath++;
             if(score<0){
                 score = 0;
             }        
             transform.position = new Vector2(-5,10); 
             ProceduralGenerationScript.destroy = true;
             hp=3;
+            consecutiveVictory = 0;
+            if(consecutiveFallDeath>=3)
+                hasDoubleJump=true;
         }
        
     }
@@ -132,6 +136,10 @@ public class Player : MonoBehaviour
             isJumping = false;
             transform.position = new Vector2(-5,10);
             ProceduralGenerationScript.destroy = true;
+            consecutiveFallDeath=0;
+            consecutiveVictory++;
+            if(consecutiveVictory>=3)
+                hasDoubleJump=false;
             hp = 3;
 
         }
@@ -151,6 +159,7 @@ public class Player : MonoBehaviour
             if (score<0){
                 score=0;
             }
+            consecutiveVictory = 0; 
             transform.position = new Vector2(-5,10);
             ProceduralGenerationScript.destroy = true; 
             hp=3;  
