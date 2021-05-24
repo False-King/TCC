@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     public bool doubleJump = false,hasDoubleJump=false;
     private Rigidbody2D rig;
     private Animator anim;
-    // Leitura do Arquivo
 
     
     // Start is called before the first frame update
@@ -45,6 +44,7 @@ public class Player : MonoBehaviour
 
     }
 
+    // função que detecta a movimentação do player
     void move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // função que cria a possibilidade de pular
     void jump()
     {   
         if(hasDoubleJump)
@@ -121,6 +122,7 @@ public class Player : MonoBehaviour
        
     }
 
+    //Função auto executavel do unity para detectar colisao
     void OnCollisionEnter2D (Collision2D collision)
     {
         if(collision.gameObject.layer == 8)
@@ -134,6 +136,14 @@ public class Player : MonoBehaviour
 
             score+=15;
             isJumping = false;
+
+            if(hp==3){
+                ProceduralGenerationScript.comprimento+=20;
+                ProceduralGenerationScript.distancia+=1;
+                Enemy.speed+=1;
+                
+            }
+
             transform.position = new Vector2(-5,10);
             ProceduralGenerationScript.destroy = true;
             consecutiveFallDeath=0;
@@ -168,6 +178,8 @@ public class Player : MonoBehaviour
 
     }
 
+
+    // Função auto executavel do unity para detectar pulo e falta de colisao
     void OnCollisionExit2D (Collision2D collision)
     {
         if(collision.gameObject.layer == 8)
@@ -176,6 +188,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Usada para chegar o estado para definir a animação a ser executada
     void anima()
     {
         if(Input.GetAxis("Vertical") >= 0f)

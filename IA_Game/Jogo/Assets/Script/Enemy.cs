@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {   
     
-    public float speed = 3f;
+    public static float speed = 3;
     public Rigidbody2D rb;
     public LayerMask groundLayers;
     public Transform groundCheck;
@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers);
-        detectDeath();
     }
 
     private void FixedUpdate()
@@ -40,15 +39,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-     void detectDeath()
-    {
-        if(transform.position.y<=-20)
-        {
-
-            Destroy(gameObject);
-
-        }
-    }
+    // Função auto executavel do unity para colisao entre 2 inimigos
     void OnCollisionEnter2D (Collision2D collision)
     {        
         if(collision.gameObject.tag == "Enemy")

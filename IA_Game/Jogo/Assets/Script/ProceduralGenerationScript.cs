@@ -9,21 +9,29 @@ using System.Threading.Tasks;
 
 public class ProceduralGenerationScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    int comprimento=180;
-    [SerializeField] public int height,pont;
-    public int x=32,tamanho,distancia=10,posicaoPlayer;
-    public float pequeno,grande,difInimigo,porcentagemDistancia;
+    // Variaveis que serão acessadas por outros arquivos são chamadas de Static
+    public static int comprimento=50,distancia=10;
+    public static float pequeno,grande,difInimigo;
     public static bool  destroy;
-    public int pontos =  Player.score;
+
+    // Variaveis com SerializeField são editaveis pelo Hub do Unity
+    [SerializeField] public int height,pont;
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
 
-    
+    //Variaveis Normais
+    public int posicaoPlayer;
+    public float porcentagemDistancia;    
+    public int pontos =  Player.score;
+   
+
+    // Start é apenas executado no começo do jogo
     void Start()
     {
         criarPlataform();
         
     }
+    
+    // Update é executado a cada frame
     void Update()
     {
         if(destroy){
@@ -35,7 +43,7 @@ public class ProceduralGenerationScript : MonoBehaviour
         
     }
 
-    //set uma nova altura da plataforma
+    // define uma nova altura para a plataforma
     void setNewHeight()
     {
         if(height<=2)
@@ -46,6 +54,8 @@ public class ProceduralGenerationScript : MonoBehaviour
             height=height+Random.Range(-4, 2);
     }
 
+    // Define a probabilidade da criaçao de plataformas e inimigos
+    // Tem que ser removido e alterado baseado com o desempenho do usuario
     void checkDificuldade()
     {   
         if(pontos<=30){
@@ -64,6 +74,7 @@ public class ProceduralGenerationScript : MonoBehaviour
         }
     }
 
+    // Cria Plataformas baseado nas probabilidades definidas
     void criarPlataform()
     {
         GameObject Plataforma;
@@ -132,6 +143,9 @@ public class ProceduralGenerationScript : MonoBehaviour
         Plataforma.name = "Final Oficial";
 
     }
+
+
+    // Destroi todas as plataformas criadas pela função de criação
     public void DestroyPlataform()
     {
         var plataformas = new List<GameObject>();
@@ -140,6 +154,7 @@ public class ProceduralGenerationScript : MonoBehaviour
         destroy = false;
     }
 
+    // calcula un float que pega a porcentagem que o usuario conseguiu alcançar na fase (0.x%, sendo 1.00 = 100%)
     public void distanciaPercorrida()
     {
         int distanciaTotal = comprimento+12;
