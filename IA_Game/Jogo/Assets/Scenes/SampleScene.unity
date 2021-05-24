@@ -273,7 +273,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 1186186422}
   PlayerZ: {fileID: 50265806}
   speed: 8
-  jumpforce: 2.5
+  jumpforce: 2.8
   isJumping: 1
   doubleJump: 0
   hasDoubleJump: 0
@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0
+  heightDif: 0
   pont: 0
   bloco: {fileID: 1932807722}
   final: {fileID: 1382350673}
@@ -902,7 +903,7 @@ GameObject:
   - component: {fileID: 245519142}
   m_Layer: 8
   m_Name: 'SmallGround '
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1850,7 +1851,7 @@ GameObject:
   - component: {fileID: 1008386203}
   m_Layer: 8
   m_Name: BigGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1972,7 +1973,7 @@ GameObject:
   - component: {fileID: 1382350674}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2640,7 +2641,7 @@ GameObject:
   - component: {fileID: 1932807723}
   m_Layer: 8
   m_Name: Ground (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

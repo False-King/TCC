@@ -139,7 +139,8 @@ public class Player : MonoBehaviour
 
             if(hp==3){
                 ProceduralGenerationScript.comprimento+=20;
-                ProceduralGenerationScript.distancia+=1;
+                if(ProceduralGenerationScript.distancia<7)
+                    ProceduralGenerationScript.distancia++;
                 Enemy.speed+=1;
                 
             }

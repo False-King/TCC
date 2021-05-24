@@ -15,11 +15,11 @@ C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57189
+59646
 Successfully changed project path to: C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo
 C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 36.96 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 36.28 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.5f1 (8095aa901b9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
@@ -35,57 +35,237 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002123 seconds.
+Registered in 0.002557 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 98.95 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 38.48 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.410 seconds
+- Completed reload, in  1.047 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003523 seconds.
+Registered in 0.000857 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 66.52 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 38.20 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.279 seconds
+- Completed reload, in  0.913 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.34 seconds
-Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1813 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 84.9 MB.
 System memory in use after: 85.0 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2261.
-Total: 26.112400 ms (FindLiveObjects: 0.465800 ms CreateObjectMapping: 0.124000 ms MarkObjects: 25.453900 ms  DeleteObjects: 0.067200 ms)
+Total: 2.150300 ms (FindLiveObjects: 0.199500 ms CreateObjectMapping: 0.087800 ms MarkObjects: 1.799400 ms  DeleteObjects: 0.062300 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Script/Player.cs
-  artifactKey: Guid(61069a39a5b691044a2f620b26c83ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/Player.cs using Guid(61069a39a5b691044a2f620b26c83ba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd680cc8be14bd2d699284c5a5c3cc5b2') in 0.025357 seconds
-  Import took 0.028622 seconds .
+  path: Assets/Script/Enemy.cs
+  artifactKey: Guid(c855f067014cef140bc32dd8ec677a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enemy.cs using Guid(c855f067014cef140bc32dd8ec677a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d06e0107f197db89891083c081958b') in 0.019664 seconds
+  Import took 0.022567 seconds .
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 1.90 ms, found 1 plugins.
+Registering precompiled user dll's ...
+Registered in 0.000856 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 48.8 MB.
-System memory in use after: 48.9 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.814 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.5 MB.
+System memory in use after: 84.6 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2261.
-Total: 35.443200 ms (FindLiveObjects: 0.554700 ms CreateObjectMapping: 0.107400 ms MarkObjects: 34.652600 ms  DeleteObjects: 0.122900 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2264.
+Total: 1.758000 ms (FindLiveObjects: 0.149600 ms CreateObjectMapping: 0.053300 ms MarkObjects: 1.541000 ms  DeleteObjects: 0.012800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 157.109281 seconds.
+  path: Assets/Script/Enemy.cs
+  artifactKey: Guid(c855f067014cef140bc32dd8ec677a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enemy.cs using Guid(c855f067014cef140bc32dd8ec677a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6970fe82c12a734949e831e3de6ac098') in 0.006829 seconds
+  Import took 0.009369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1028.940796 seconds.
+  path: Assets/Script/Enemy.cs
+  artifactKey: Guid(c855f067014cef140bc32dd8ec677a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enemy.cs using Guid(c855f067014cef140bc32dd8ec677a0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0873c2e9403f88dc4088e0dc0dbf4bd2') in 0.009144 seconds
+  Import took 0.013664 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.919207 seconds.
+  path: Assets/Pixel Adventure 1
+  artifactKey: Guid(85dc5d7c5fb5e33439bfb9c076264a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1 using Guid(85dc5d7c5fb5e33439bfb9c076264a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fdd76e5d5f078ba88d67bf630973056') in 0.007045 seconds
+  Import took 0.010113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.122967 seconds.
+  path: Assets/Pixel Adventure 1/Assets
+  artifactKey: Guid(e7fabf8f9d1b6f6499883b9c8ad15b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets using Guid(e7fabf8f9d1b6f6499883b9c8ad15b65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4fafc78fd6245cd2716edbf724ffc5') in 0.008075 seconds
+  Import took 0.011918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.012536 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background
+  artifactKey: Guid(e2c5ef056991e3c4b902833ce4b5c2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background using Guid(e2c5ef056991e3c4b902833ce4b5c2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96bb30718bb97f6fac54a21175c4fc08') in 0.007930 seconds
+  Import took 0.011145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044987 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/background.png
+  artifactKey: Guid(07cbd57e56b99eb4eaf121c768f30f26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/background.png using Guid(07cbd57e56b99eb4eaf121c768f30f26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd88aaf449866d2c592d9a106c39e1523') in 0.109032 seconds
+  Import took 0.111702 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Gray.png
+  artifactKey: Guid(ffc80c129c9aca14c9fb4dbeba0e10d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Gray.png using Guid(ffc80c129c9aca14c9fb4dbeba0e10d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4ca962d047c194b30345bc9e3fe103c') in 0.019496 seconds
+  Import took 0.022148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Green.png
+  artifactKey: Guid(2538710101d0f1f4e8976b3495cd1f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Green.png using Guid(2538710101d0f1f4e8976b3495cd1f75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa9d660d9d5c16c6cce46e74a359c0c') in 0.020215 seconds
+  Import took 0.023626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Blue.png
+  artifactKey: Guid(8049ea91a9d5fca4dab4024c0915dbe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Blue.png using Guid(8049ea91a9d5fca4dab4024c0915dbe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ba5962ea56097eb971ac6be6ac12689') in 0.018924 seconds
+  Import took 0.021957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Yellow.png
+  artifactKey: Guid(4d8c75a4d7dd2a0489270e1058d82128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Yellow.png using Guid(4d8c75a4d7dd2a0489270e1058d82128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c818f05a0677e73358f6fc14b7f7a92') in 0.018432 seconds
+  Import took 0.021600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Pink.png
+  artifactKey: Guid(348c3b734b11d3b4aa5c69e25b7113e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Pink.png using Guid(348c3b734b11d3b4aa5c69e25b7113e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f90de0de71d84800a27de32bef0662') in 0.018229 seconds
+  Import took 0.022148 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000494 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Brown.png
+  artifactKey: Guid(ca6a66f8e2ae9c24c8c6b39c49206a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Brown.png using Guid(ca6a66f8e2ae9c24c8c6b39c49206a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b897746cdd1f3b3b20a0454198c368b') in 0.017598 seconds
+  Import took 0.020708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/bg.png
+  artifactKey: Guid(7c9ff7adc78569a4ab81d99802c7f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/bg.png using Guid(7c9ff7adc78569a4ab81d99802c7f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c05a611ba8b8fb770be20056cb294aa5') in 0.020982 seconds
+  Import took 0.023540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/Purple.png
+  artifactKey: Guid(248611cc7bb8d85448933cee393ce41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/Purple.png using Guid(248611cc7bb8d85448933cee393ce41e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d5839beaa4147f0f70d786ebfea185') in 0.019044 seconds
+  Import took 0.021753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.609889 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/N38KaB.png
+  artifactKey: Guid(48f57812a2607e845b0809ed57e05f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/N38KaB.png using Guid(48f57812a2607e845b0809ed57e05f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfea81c87d5f222605d42c215c8ce10') in 0.022467 seconds
+  Import took 0.025710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006754 seconds.
+  path: Assets/Pixel Adventure 1/Assets/Background/N38KaB.png
+  artifactKey: Guid(48f57812a2607e845b0809ed57e05f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pixel Adventure 1/Assets/Background/N38KaB.png using Guid(48f57812a2607e845b0809ed57e05f40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfea81c87d5f222605d42c215c8ce10') in 0.014406 seconds
+  Import took 0.019433 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000983 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.806 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.6 MB.
+System memory in use after: 87.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2277.
+Total: 1.729800 ms (FindLiveObjects: 0.143400 ms CreateObjectMapping: 0.048900 ms MarkObjects: 1.524500 ms  DeleteObjects: 0.011800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000995 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.818 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 87.6 MB.
+System memory in use after: 87.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2280.
+Total: 1.776600 ms (FindLiveObjects: 0.188000 ms CreateObjectMapping: 0.089700 ms MarkObjects: 1.483900 ms  DeleteObjects: 0.014200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

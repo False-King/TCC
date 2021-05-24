@@ -10,12 +10,11 @@ using System.Threading.Tasks;
 public class ProceduralGenerationScript : MonoBehaviour
 {
     // Variaveis que serão acessadas por outros arquivos são chamadas de Static
-    public static int comprimento=50,distancia=10;
-    public static float pequeno,grande,difInimigo;
+    public static float pequeno,grande,difInimigo,comprimento=50,distancia=7;
     public static bool  destroy;
 
     // Variaveis com SerializeField são editaveis pelo Hub do Unity
-    [SerializeField] public int height,pont;
+    [SerializeField] public int height,heightDif,pont;
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
 
     //Variaveis Normais
@@ -46,12 +45,14 @@ public class ProceduralGenerationScript : MonoBehaviour
     // define uma nova altura para a plataforma
     void setNewHeight()
     {
+        heightDif=height;
         if(height<=2)
             height=height+Random.Range(0, 4);
         else if(height>=4)
             height=height+Random.Range(-4, 0);
         else
             height=height+Random.Range(-4, 2);
+        heightDif=height-heightDif;
     }
 
     // Define a probabilidade da criaçao de plataformas e inimigos
@@ -78,7 +79,8 @@ public class ProceduralGenerationScript : MonoBehaviour
     void criarPlataform()
     {
         GameObject Plataforma;
-        int z=0, j=1;
+        int j=1;
+        float z=0;
 
         checkDificuldade();
 
@@ -87,7 +89,10 @@ public class ProceduralGenerationScript : MonoBehaviour
             setNewHeight();
             if(Random.Range(0, 10)>=pequeno)
             {
-
+                
+                z+=(float)(1.25);
+                if(distancia>6&&heightDif>=3)
+                    z+=-1;
                 Plataforma = Instantiate(blocoP, new Vector2(z+32, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
@@ -97,17 +102,19 @@ public class ProceduralGenerationScript : MonoBehaviour
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
-                    z+=distancia-1;
+                    z+=(float)(distancia-1+1.25);
                 }
                 else
                 {
-                    z+=distancia;
+                    z+=(float)(distancia+1.25);
                 }
 
             }
             else if(Random.Range(0, 10)<=grande)
             {
-            
+                z+=(float)(5);
+                if(distancia>6&&heightDif>=3)
+                    z+=-1;
                 Plataforma = Instantiate(blocoG, new Vector2(z+32, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
@@ -118,10 +125,12 @@ public class ProceduralGenerationScript : MonoBehaviour
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
-                z+=distancia+3;
+                z+=(float)(distancia+5);
             }
             else{
-
+                z+=(float)(2.5);
+                if(distancia>6&&heightDif>=3)
+                    z+=-1;
                 Plataforma = Instantiate(bloco, new Vector2(z+32, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
@@ -132,7 +141,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
-                z+=distancia;
+                z+=(float)(distancia+2.5);
                 
             }
         }
@@ -157,7 +166,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     // calcula un float que pega a porcentagem que o usuario conseguiu alcançar na fase (0.x%, sendo 1.00 = 100%)
     public void distanciaPercorrida()
     {
-        int distanciaTotal = comprimento+12;
+        float distanciaTotal = comprimento+12;
         porcentagemDistancia = Player.deathPosition/distanciaTotal;
         print(porcentagemDistancia.ToString());
     }
