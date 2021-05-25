@@ -136,21 +136,38 @@ public class Player : MonoBehaviour
 
             score+=15;
             isJumping = false;
-
-            if(hp==3){
-                ProceduralGenerationScript.comprimento+=20;
-                if(ProceduralGenerationScript.distancia<7)
-                    ProceduralGenerationScript.distancia++;
-                Enemy.speed+=1;
-                
-            }
-
-            transform.position = new Vector2(-5,10);
-            ProceduralGenerationScript.destroy = true;
             consecutiveFallDeath=0;
             consecutiveVictory++;
-            if(consecutiveVictory>=3)
+            
+            //segue as intruções apresentadas no draw.io
+            if(consecutiveVictory>=3 && hasDoubleJump==true)
                 hasDoubleJump=false;
+            else{
+                if(hp==3){
+                    ProceduralGenerationScript.comprimento+=20;
+                    ProceduralGenerationScript.difInimigo+=5;
+                    Enemy.speed+=(float)(0.5);
+
+                    if(ProceduralGenerationScript.distancia<7)
+                        ProceduralGenerationScript.distancia+=(float)(0.5);
+                    if(ProceduralGenerationScript.difInimigo>=20);
+                        Enemy.speed+=(float)(0.1);
+                    
+                }
+                else if(hp==2){
+                    if(UnityEngine.Random.Range(1,10)>5)
+                        Enemy.speed+=(float)(0.5);
+                    else
+                        ProceduralGenerationScript.difInimigo+=5;
+                }
+                else if(hp==1){
+                    if(ProceduralGenerationScript.distancia<7)
+                        ProceduralGenerationScript.distancia+=(float)(0.5);
+                }
+            }
+            transform.position = new Vector2(-5,10);
+            ProceduralGenerationScript.destroy = true;
+                
             hp = 3;
 
         }

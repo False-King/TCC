@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 public class ProceduralGenerationScript : MonoBehaviour
 {
     // Variaveis que serão acessadas por outros arquivos são chamadas de Static
-    public static float pequeno,grande,difInimigo,comprimento=50,distancia=7;
+    public static float pequeno=0,grande=60,difInimigo=0,comprimento=50,distancia=3;
     public static bool  destroy;
 
     // Variaveis com SerializeField são editaveis pelo Hub do Unity
@@ -82,12 +82,11 @@ public class ProceduralGenerationScript : MonoBehaviour
         int j=1;
         float z=0;
 
-        checkDificuldade();
 
         while(z<comprimento)
         {   
             setNewHeight();
-            if(Random.Range(0, 10)>=pequeno)
+            if(Random.Range(0, 100)<=pequeno)
             {
                 
                 z+=(float)(1.25);
@@ -98,7 +97,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
-                if(Random.Range(0, 10)>=difInimigo)
+                if(Random.Range(0, 100)<=difInimigo)
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
@@ -110,7 +109,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 }
 
             }
-            else if(Random.Range(0, 10)<=grande)
+            else if(Random.Range(0, 100)<=grande)
             {
                 z+=(float)(5);
                 if(distancia>6&&heightDif>=3)
@@ -120,7 +119,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
-                if(Random.Range(0, 10)>=difInimigo)
+                if(Random.Range(0, 100)<=difInimigo)
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
@@ -136,7 +135,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
-                if(Random.Range(0, 10)>=difInimigo)
+                if(Random.Range(0, 100)<=difInimigo)
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
