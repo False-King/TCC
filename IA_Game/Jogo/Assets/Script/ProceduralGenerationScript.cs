@@ -1,3 +1,4 @@
+using System.Linq;
 using System.ComponentModel;
 using System.Data.Common;
 using System.Collections;
@@ -35,7 +36,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     {
         if(destroy){
             DestroyPlataform();
-            
+            arvore();
             criarPlataform();
             distanciaPercorrida();
         }
@@ -55,25 +56,6 @@ public class ProceduralGenerationScript : MonoBehaviour
         heightDif=height-heightDif;
     }
 
-    // Define a probabilidade da criaçao de plataformas e inimigos
-    // Tem que ser removido e alterado baseado com o desempenho do usuario
-    void checkDificuldade()
-    {   
-        if(pontos<=30){
-            difInimigo = 10;
-            grande = 6;
-            pequeno = 10;
-        }else if(pontos>100){
-            difInimigo = 5;
-            grande = 1;
-            pequeno = 6;
-        }else
-        {
-            difInimigo = 8;
-            grande = 3;
-            pequeno = 9;
-        }
-    }
 
     // Cria Plataformas baseado nas probabilidades definidas
     void criarPlataform()
@@ -86,7 +68,8 @@ public class ProceduralGenerationScript : MonoBehaviour
         while(z<comprimento)
         {   
             setNewHeight();
-            if(Random.Range(0, 100)<=pequeno)
+            int valorInimigo = Random.Range(1, 100);
+            if(Random.Range(1, 100)<=pequeno)
             {
                 
                 z+=(float)(1.25);
@@ -97,7 +80,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
-                if(Random.Range(0, 100)<=difInimigo)
+                if(valorInimigo<=difInimigo)
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
@@ -109,7 +92,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 }
 
             }
-            else if(Random.Range(0, 100)<=grande)
+            else if(Random.Range(1, 100)<=grande)
             {
                 z+=(float)(5);
                 if(distancia>6&&heightDif>=3)
@@ -119,7 +102,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
-                if(Random.Range(0, 100)<=difInimigo)
+                if(valorInimigo<=difInimigo)
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
@@ -135,7 +118,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
-                if(Random.Range(0, 100)<=difInimigo)
+                if(valorInimigo<=difInimigo)
                 {
                     Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
@@ -149,6 +132,7 @@ public class ProceduralGenerationScript : MonoBehaviour
         Plataforma = Instantiate(final, new Vector2(z+32, height), Quaternion.identity);
         Plataforma.transform.parent = contaninerPlataforma.transform;
         Plataforma.name = "Final Oficial";
+        print(grande);
 
     }
 
@@ -167,9 +151,149 @@ public class ProceduralGenerationScript : MonoBehaviour
     {
         float distanciaTotal = comprimento+12;
         porcentagemDistancia = Player.deathPosition/distanciaTotal;
-        print(porcentagemDistancia.ToString());
     }
-}
+    public void arvore()
+    {   
+        if(Player.final=="enemy"){
+            if(porcentagemDistancia < 0.50){
+                if(Enemy.speed==2){
+                    if(difInimigo>=0){
+                        difInimigo-=10;
+                    }
+                }else{
+                    Enemy.speed = Enemy.speed - (Enemy.speed * (float)(0.15));
+                }
+            }else{
+                if(porcentagemDistancia > 0.50){
+                    if(difInimigo>=0){
+                        difInimigo-=10;
+                    }else{
+                        if(Enemy.speed>2){
+                            Enemy.speed = Enemy.speed - (Enemy.speed * (float)(0.15));
+                        }
+                    }
+                }
+            }
+        }
+        if(Player.final=="fall"){
+            if(porcentagemDistancia >0.79){
+                if(distancia>3){
+                    distancia = distancia - (distancia * (float)(0.1));
+                }else{
+
+                    if(pequeno>0){
+                        pequeno-=10;
+                    }else{
+                        if(grande<100){
+                            grande+=10;
+                        }
+                    }
+                }
+            }else{
+                if(Player.hasDoubleJump){
+                    if(distancia>3){
+                        distancia = distancia - (distancia * (float)(0.1));
+                    }
+                }else{
+                    if(Player.consecutiveFallDeath==3){
+                        Player.hasDoubleJump = true;
+                    }else{
+                        if(distancia>3){
+                            distancia = distancia - (distancia * (float)(0.1));
+                        }else{
+                            if(pequeno>0){
+                                pequeno-=10;
+                            }else{
+                                if(grande<100){
+                                    grande+=10;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if(Player.final=="win"){
+            if(Player.hasDoubleJump && Player.consecutiveVictory==3){
+                Player.hasDoubleJump = false;
+            }else{
+                if(Player.hp==3){
+                    if(pequeno<50){
+                        pequeno+=10;
+                    }else{
+                        if(grande>0){
+                            grande-=10;
+                        }
+                    }
+                    if(distancia<7){
+                        distancia = distancia + (distancia * (float)(0.25));
+                    }
+                    if(Enemy.speed<5){
+                        Enemy.speed = Enemy.speed + (Enemy.speed * (float)(0.25));
+                    }
+                    if(difInimigo<50){
+                        difInimigo+=10;
+                    }
+                }
+                if(Player.hp==2){
+                    int i = Random.Range(1, 9);
+                    if(i>4){
+                        if(pequeno<50){
+                        pequeno+=10;
+                        }else{
+                            if(grande>0){
+                                grande-=10;
+                            }
+                        }
+                    }else if(i<6){
+                            if(Enemy.speed<5){
+                            Enemy.speed = Enemy.speed + (Enemy.speed * (float)(0.25));
+                            }                    
+                        }
+                    else{
+                        if(difInimigo<50){
+                            difInimigo+=10;
+                        }
+                    }
+
+                }
+                if(Player.hp==1){
+                    if(distancia<7){
+                        distancia = distancia + (distancia * (float)(0.25));
+                    }
+                }
+            }
+        }
+    comprimento+=20;
+    limites();
+    
+    }
+        
+        public void limites(){
+            if(grande<0){
+                grande = 0;
+            }
+            if(grande>100){
+                grande = 100;
+            }
+            if(pequeno>50){
+                pequeno = 50;
+            }
+            if(pequeno<0){
+                pequeno = 0;
+            }
+            if(distancia>7){
+                distancia=7;
+            }
+            if(distancia<2){
+                distancia=2;
+            }
+            if(difInimigo>50){
+                difInimigo=50;
+            }
+        }
+    }
+
 
 
 

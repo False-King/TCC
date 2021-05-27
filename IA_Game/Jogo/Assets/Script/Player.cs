@@ -14,11 +14,12 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject PlayerZ;
     
     public static float deathPosition=1;
+    public static String final;
     public float speed;
     public float jumpforce;
     public bool isJumping;
     public static int score=0, hp=3,consecutiveFallDeath=0,consecutiveVictory=0;
-    public bool doubleJump = false,hasDoubleJump=false;
+    public static bool doubleJump = false,hasDoubleJump=false;
     private Rigidbody2D rig;
     private Animator anim;
 
@@ -113,10 +114,12 @@ public class Player : MonoBehaviour
                 score = 0;
             }        
             transform.position = new Vector2(-5,10); 
+            final = "fall";
             ProceduralGenerationScript.destroy = true;
             hp=3;
             consecutiveVictory = 0;
             if(consecutiveFallDeath>=3)
+                final = "Ganhou DB";
                 hasDoubleJump=true;
         }
        
@@ -138,33 +141,7 @@ public class Player : MonoBehaviour
             isJumping = false;
             consecutiveFallDeath=0;
             consecutiveVictory++;
-            
-            //segue as intruções apresentadas no draw.io
-            if(consecutiveVictory>=3 && hasDoubleJump==true)
-                hasDoubleJump=false;
-            else{
-                if(hp==3){
-                    ProceduralGenerationScript.comprimento+=20;
-                    ProceduralGenerationScript.difInimigo+=5;
-                    Enemy.speed+=(float)(0.5);
-
-                    if(ProceduralGenerationScript.distancia<7)
-                        ProceduralGenerationScript.distancia+=(float)(0.5);
-                    if(ProceduralGenerationScript.difInimigo>=20);
-                        Enemy.speed+=(float)(0.1);
-                    
-                }
-                else if(hp==2){
-                    if(UnityEngine.Random.Range(1,10)>5)
-                        Enemy.speed+=(float)(0.5);
-                    else
-                        ProceduralGenerationScript.difInimigo+=5;
-                }
-                else if(hp==1){
-                    if(ProceduralGenerationScript.distancia<7)
-                        ProceduralGenerationScript.distancia+=(float)(0.5);
-                }
-            }
+            final = "win";
             transform.position = new Vector2(-5,10);
             ProceduralGenerationScript.destroy = true;
                 
@@ -176,11 +153,8 @@ public class Player : MonoBehaviour
             if(hp>1){
                 hp--;
                 rig.AddForce(new Vector2(0, 1.5f), ForceMode2D.Impulse);
-               
-
             }else
             {
-
             isJumping = false;
             score-=5;
 
@@ -189,8 +163,10 @@ public class Player : MonoBehaviour
             }
             consecutiveVictory = 0; 
             transform.position = new Vector2(-5,10);
+            final = "enemy";
             ProceduralGenerationScript.destroy = true; 
             hp=3;  
+
             }
         }
 

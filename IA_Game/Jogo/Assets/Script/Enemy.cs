@@ -19,7 +19,13 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     private void Update()
-    {
+    {   
+        if(speed<2){
+            speed = 2;
+        }
+        if(speed>5){
+            speed = 5;
+        }
         hit = Physics2D.Raycast(groundCheck.position, -transform.up, 1f, groundLayers);
     }
 
