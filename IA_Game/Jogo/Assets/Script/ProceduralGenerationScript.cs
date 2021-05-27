@@ -15,7 +15,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     public static bool  destroy;
 
     // Variaveis com SerializeField são editaveis pelo Hub do Unity
-    [SerializeField] public int height,heightDif,pont;
+    [SerializeField] public int height=0,heightDif,pont;
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
 
     //Variaveis Normais
@@ -36,6 +36,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     {
         if(destroy){
             DestroyPlataform();
+            height=0;
             arvore();
             criarPlataform();
             distanciaPercorrida();
@@ -48,7 +49,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     {
         heightDif=height;
         if(height<=2)
-            height=height+Random.Range(0, 4);
+            height=height+Random.Range(0, 3);
         else if(height>=4)
             height=height+Random.Range(-4, 0);
         else
@@ -75,14 +76,14 @@ public class ProceduralGenerationScript : MonoBehaviour
                 z+=(float)(1.25);
                 if(distancia>6&&heightDif>=3)
                     z+=-1;
-                Plataforma = Instantiate(blocoP, new Vector2(z+32, height), Quaternion.identity);
+                Plataforma = Instantiate(blocoP, new Vector2(z+11, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
                 if(valorInimigo<=difInimigo)
                 {
-                    Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+11, height+3), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                     z+=(float)(distancia-1+1.25);
                 }
@@ -97,14 +98,14 @@ public class ProceduralGenerationScript : MonoBehaviour
                 z+=(float)(5);
                 if(distancia>6&&heightDif>=3)
                     z+=-1;
-                Plataforma = Instantiate(blocoG, new Vector2(z+32, height), Quaternion.identity);
+                Plataforma = Instantiate(blocoG, new Vector2(z+11, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
                 if(valorInimigo<=difInimigo)
                 {
-                    Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+11, height+3), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
                 z+=(float)(distancia+5);
@@ -113,14 +114,14 @@ public class ProceduralGenerationScript : MonoBehaviour
                 z+=(float)(2.5);
                 if(distancia>6&&heightDif>=3)
                     z+=-1;
-                Plataforma = Instantiate(bloco, new Vector2(z+32, height), Quaternion.identity);
+                Plataforma = Instantiate(bloco, new Vector2(z+11, height), Quaternion.identity);
                 Plataforma.transform.parent = contaninerPlataforma.transform;
                 Plataforma.name = "Plataforma " + (j);
                 j++;
 
                 if(valorInimigo<=difInimigo)
                 {
-                    Plataforma = Instantiate(inimigo, new Vector2(z+12, height), Quaternion.identity);
+                    Plataforma = Instantiate(inimigo, new Vector2(z+11, height+3), Quaternion.identity);
                     Plataforma.transform.parent = contaninerPlataforma.transform;
                 }
                 z+=(float)(distancia+2.5);
@@ -129,7 +130,7 @@ public class ProceduralGenerationScript : MonoBehaviour
         }
         
         setNewHeight();
-        Plataforma = Instantiate(final, new Vector2(z+32, height), Quaternion.identity);
+        Plataforma = Instantiate(final, new Vector2(z+11+distancia, height), Quaternion.identity);
         Plataforma.transform.parent = contaninerPlataforma.transform;
         Plataforma.name = "Final Oficial";
         print(grande);

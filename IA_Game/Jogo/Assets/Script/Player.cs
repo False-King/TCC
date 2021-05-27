@@ -118,9 +118,6 @@ public class Player : MonoBehaviour
             ProceduralGenerationScript.destroy = true;
             hp=3;
             consecutiveVictory = 0;
-            if(consecutiveFallDeath>=3)
-                final = "Ganhou DB";
-                hasDoubleJump=true;
         }
        
     }

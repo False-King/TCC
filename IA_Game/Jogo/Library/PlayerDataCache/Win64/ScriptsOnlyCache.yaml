@@ -1,7 +1,6 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Background
     - Camera
     - Enemy
     - Player
@@ -11,6 +10,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.SpriteShape.Runtime.dll:
@@ -80,15 +80,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3338}
-    - Class: 114
       Script: {instanceID: 3510}
     - Class: 114
       Script: {instanceID: 3606}
     - Class: 114
       Script: {instanceID: 4480}
     - Class: 114
-      Script: {instanceID: 16518}
+      Script: {instanceID: 16524}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -440,7 +438,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 534cbd321b3797bb3f83fe0975cf08f4
+      Hash: 15980832b5913550af24a9f51f904c45
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProceduralGenerationScript
@@ -476,7 +474,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: aacd87ded82844584a15758633373c3e
+      Hash: ac2d1d95ca87ecd952a8d7b2de2c84f9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -620,7 +618,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 214125876344c6ed64094995040472ea
+      Hash: 2c768f183f04472b9d7cf01bb575fe85
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -669,4 +667,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/False/Documents/GameExe/5Cavaleiros.exe
+  playerPath: C:/Users/False/Desktop/JogoPronto/5Cavaleiros.exe
