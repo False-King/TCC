@@ -6,6 +6,8 @@ public class Camera : MonoBehaviour
 {
     public Transform Player;
     public Transform CameraPosition;
+
+    float cameraY;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +17,17 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Player.position.x-2 > CameraPosition.position.x)
+        
+        setCameraY();
+        transform.position = new Vector3(Player.position.x +5, cameraY, -10);
+        
+    }
+
+    void setCameraY()
+    {
+        if(Player.position.y > 4.5)
         {
-            transform.position = new Vector3(Player.position.x-2, 0, -10);
-        }
-        if(Player.position.x+4 < CameraPosition.position.x)
-        {
-            transform.position = new Vector3(Player.position.x +5, 0, -10);
+            cameraY = Player.position.y - (float)(4.5); 
         }
     }
 
