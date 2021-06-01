@@ -1,0 +1,582 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16204 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+50715
+Successfully changed project path to: C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo
+C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 38.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/False/Documents/JOJIADAISUDHAU/TCC/IA_Game/Jogo/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c91)
+    Vendor:   
+    VRAM:     2996 MB
+    Driver:   27.21.14.6611
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002208 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 39.88 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.257 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008505 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 43.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.956 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1813 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.9 MB.
+System memory in use after: 85.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2261.
+Total: 1.794900 ms (FindLiveObjects: 0.183300 ms CreateObjectMapping: 0.075200 ms MarkObjects: 1.476200 ms  DeleteObjects: 0.059600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8870335ff4620accb6bfd967d7de277e') in 0.027789 seconds
+  Import took 0.034128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 161.732374 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '057d9b5a03bd581f680e51ec8a35dc62') in 0.002054 seconds
+  Import took 0.005196 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000824 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.824 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.5 MB.
+System memory in use after: 84.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2264.
+Total: 1.925500 ms (FindLiveObjects: 0.152000 ms CreateObjectMapping: 0.064700 ms MarkObjects: 1.693000 ms  DeleteObjects: 0.014600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.567173 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b2b5496563671873232be32b0500174') in 0.006471 seconds
+  Import took 0.009087 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000840 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.793 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.5 MB.
+System memory in use after: 84.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2267.
+Total: 1.834000 ms (FindLiveObjects: 0.153600 ms CreateObjectMapping: 0.065100 ms MarkObjects: 1.594900 ms  DeleteObjects: 0.019000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000865 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.782 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2270.
+Total: 1.838100 ms (FindLiveObjects: 0.260200 ms CreateObjectMapping: 0.083600 ms MarkObjects: 1.479500 ms  DeleteObjects: 0.013900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 611.360610 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dcb702d75812fa4dd5fc32f3f31cd4c') in 0.006760 seconds
+  Import took 0.009452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.710234 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c69ff748eca88ae32163c480209529da') in 0.003117 seconds
+  Import took 0.008285 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.779 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2273.
+Total: 1.832000 ms (FindLiveObjects: 0.209800 ms CreateObjectMapping: 0.082000 ms MarkObjects: 1.524800 ms  DeleteObjects: 0.014500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.468922 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0ebaf2b538b147e657453da2be29d24') in 0.003936 seconds
+  Import took 0.006564 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000949 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.031 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2276.
+Total: 2.172600 ms (FindLiveObjects: 0.222600 ms CreateObjectMapping: 0.100000 ms MarkObjects: 1.811400 ms  DeleteObjects: 0.036900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.281110 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a6c1cfbba0c90cc4c9d2dd1b4f7dd27') in 0.009388 seconds
+  Import took 0.013051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.251812 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693acd2a2ac30719367524ce93f56028') in 0.003018 seconds
+  Import took 0.006833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.906971 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4504ec7ab4c27b60bee5b08d2db73e') in 0.002014 seconds
+  Import took 0.004976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.233783 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '277ab1c200e3b9024f76a47804a19dcd') in 0.003647 seconds
+  Import took 0.006806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.885556 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45bc6bbae4ac25cbf03b804af96cc141') in 0.002345 seconds
+  Import took 0.005410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.245598 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f3edc9ff78890e7b9b792ca29fb1a20') in 0.002190 seconds
+  Import took 0.005113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035866 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f3edc9ff78890e7b9b792ca29fb1a20') in 0.008097 seconds
+  Import took 0.011555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.083092 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11067f53892b53109ce3f282407f3847') in 0.007909 seconds
+  Import took 0.011704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037803 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11067f53892b53109ce3f282407f3847') in 0.003172 seconds
+  Import took 0.007473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.598087 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d5809ca3b5f64d2dabc666f135f7012') in 0.002231 seconds
+  Import took 0.005897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.687911 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c348e15ea0dc887c478b0ab109e2765') in 0.003736 seconds
+  Import took 0.008548 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000862 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.908 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2279.
+Total: 2.680900 ms (FindLiveObjects: 0.237300 ms CreateObjectMapping: 0.213000 ms MarkObjects: 2.213300 ms  DeleteObjects: 0.015300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.318533 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca20f93119ec5005c0a9bb2b1ae99adf') in 0.007691 seconds
+  Import took 0.011041 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001050 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.871 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2282.
+Total: 2.054100 ms (FindLiveObjects: 0.212100 ms CreateObjectMapping: 0.108300 ms MarkObjects: 1.718000 ms  DeleteObjects: 0.014600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000898 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.850 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2285.
+Total: 2.784700 ms (FindLiveObjects: 0.298900 ms CreateObjectMapping: 0.111900 ms MarkObjects: 2.354300 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 93.344847 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13b47fd51801a9c1b955f2ed12717b72') in 0.007484 seconds
+  Import took 0.010390 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001012 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.840 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2288.
+Total: 2.256700 ms (FindLiveObjects: 0.288100 ms CreateObjectMapping: 0.122400 ms MarkObjects: 1.829300 ms  DeleteObjects: 0.015100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 62.546797 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b6a8d1435b4da357e71fef0f8386eed') in 0.007798 seconds
+  Import took 0.010631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.910626 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '945e9b3995b21b7640e0975ffc2aba68') in 0.002030 seconds
+  Import took 0.005170 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000917 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2291.
+Total: 2.143000 ms (FindLiveObjects: 0.212100 ms CreateObjectMapping: 0.106400 ms MarkObjects: 1.808800 ms  DeleteObjects: 0.014400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.390936 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd520f56e0defe748268311dbef99518e') in 0.007395 seconds
+  Import took 0.010839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.576723 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5a6c71d25b939166ef5dab17d4a9ab0') in 0.002962 seconds
+  Import took 0.007233 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000883 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.853 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2294.
+Total: 2.288200 ms (FindLiveObjects: 0.323300 ms CreateObjectMapping: 0.130200 ms MarkObjects: 1.809500 ms  DeleteObjects: 0.023600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 81.992599 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e03323bc933bf2e593079c8187c0fceb') in 0.004592 seconds
+  Import took 0.007668 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000928 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.863 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2297.
+Total: 2.222300 ms (FindLiveObjects: 0.209400 ms CreateObjectMapping: 0.081600 ms MarkObjects: 1.910800 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.669065 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e60ff2fb88b13f0b8dc2b02a015ccb3') in 0.008277 seconds
+  Import took 0.011227 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000892 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.837 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.6 MB.
+System memory in use after: 84.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2300.
+Total: 2.194100 ms (FindLiveObjects: 0.204400 ms CreateObjectMapping: 0.091800 ms MarkObjects: 1.878800 ms  DeleteObjects: 0.017900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.024110 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594def85e2c72239769b4b7be2f371db') in 0.004050 seconds
+  Import took 0.006722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.066755 seconds.
+  path: Assets/Script/ProceduralGenerationScript.cs
+  artifactKey: Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/ProceduralGenerationScript.cs using Guid(b17d9d8a0b7fd784a969dc20d0ee2171) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '594def85e2c72239769b4b7be2f371db') in 0.002518 seconds
+  Import took 0.005158 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001006 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1804 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.7 MB.
+System memory in use after: 84.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2303.
+Total: 1.924500 ms (FindLiveObjects: 0.181800 ms CreateObjectMapping: 0.074500 ms MarkObjects: 1.653100 ms  DeleteObjects: 0.013900 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

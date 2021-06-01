@@ -1,3 +1,4 @@
+using System.Net;
 using System.Linq;
 using System.ComponentModel;
 using System.Data.Common;
@@ -19,7 +20,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     [SerializeField] public GameObject bloco, final, inimigo, blocoP, blocoG, contaninerPlataforma;
 
     //Variaveis Normais
-    public int posicaoPlayer;
+    public int posicaoPlayer,fase=1;
     public float porcentagemDistancia;    
     public int pontos =  Player.score;
    
@@ -35,6 +36,7 @@ public class ProceduralGenerationScript : MonoBehaviour
     void Update()
     {
         if(destroy){
+            historico();
             DestroyPlataform();
             height=0;
             arvore();
@@ -293,6 +295,47 @@ public class ProceduralGenerationScript : MonoBehaviour
                 difInimigo=50;
             }
         }
+
+        public void historico(){
+        string path = "historico.txt";
+        if (!File.Exists(path))
+        {
+            // Create a file to write to.
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine("Fase "+ fase +": " + Player.final);
+                sw.WriteLine("HP: " + Player.hp);
+                sw.WriteLine("Comprimento da fase: " + comprimento);
+                sw.WriteLine("Distancia entre plataformas: " + distancia);
+                sw.WriteLine("Distancia percorrida: " + porcentagemDistancia);
+                sw.WriteLine("Chance de aparecer inimigos: " + difInimigo);
+                sw.WriteLine("Velocidade dos inimigos: " + Enemy.speed);
+                sw.WriteLine("Chances de aparecer plataformas pequenas: " + pequeno);
+                sw.WriteLine("Chances de aparecer plataformas grandes: " + grande);
+                sw.Close();
+                fase++;
+            }
+        }
+
+        // Open the file to read from.
+        using (StreamWriter sw = File.AppendText(path))
+        {
+                sw.WriteLine("Fase "+ fase +": " + Player.final);
+                sw.WriteLine("HP: " + Player.hp);
+                sw.WriteLine("Comprimento da fase: " + comprimento);
+                sw.WriteLine("Distancia entre plataformas: " + distancia);
+                sw.WriteLine("Distancia percorrida: " + porcentagemDistancia);
+                sw.WriteLine("Chance de aparecer inimigos: " + difInimigo);
+                sw.WriteLine("Velocidade dos inimigos: " + Enemy.speed);
+                sw.WriteLine("Chances de aparecer plataformas pequenas: " + pequeno);
+                sw.WriteLine("Chances de aparecer plataformas grandes: " + grande);
+                sw.Close();
+                fase++;
+        }
+        
+    }
+
+        
     }
 
 

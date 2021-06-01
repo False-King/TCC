@@ -1,0 +1,36 @@
+Fase 1: fall
+HP: 3
+Comprimento da fase: 50
+Distancia entre plataformas: 3
+Distancia percorrida: 0
+Chance de aparecer inimigos: Mr Eye  (UnityEngine.GameObject)
+Velocidade dos inimigos: 3
+Chances de aparecer plataformas pequenas: 0
+Chances de aparecer plataformas grandes: 60
+Fase 2: fall
+HP: 3
+Comprimento da fase: 70
+Distancia entre plataformas: 3
+Distancia percorrida: -0.1614906
+Chance de aparecer inimigos: Mr Eye  (UnityEngine.GameObject)
+Velocidade dos inimigos: 3
+Chances de aparecer plataformas pequenas: 0
+Chances de aparecer plataformas grandes: 70
+Fase 3: fall
+HP: 3
+Comprimento da fase: 90
+Distancia entre plataformas: 3
+Distancia percorrida: -0.1295152
+Chance de aparecer inimigos: Mr Eye  (UnityEngine.GameObject)
+Velocidade dos inimigos: 3
+Chances de aparecer plataformas pequenas: 0
+Chances de aparecer plataformas grandes: 80
+Fase 4: fall
+HP: 3
+Comprimento da fase: 110
+Distancia entre plataformas: 3
+Distancia percorrida: -0.1070543
+Chance de aparecer inimigos: Mr Eye  (UnityEngine.GameObject)
+Velocidade dos inimigos: 3
+Chances de aparecer plataformas pequenas: 0
+Chances de aparecer plataformas grandes: 80
