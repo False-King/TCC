@@ -10,7 +10,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.SpriteShape.Runtime.dll:
@@ -86,7 +85,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4480}
     - Class: 114
-      Script: {instanceID: 16524}
+      Script: {instanceID: 16542}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -438,7 +437,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 15980832b5913550af24a9f51f904c45
+      Hash: 3cf79aa682994f88711a99ef831dc96c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ProceduralGenerationScript

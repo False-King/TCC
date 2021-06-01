@@ -312,6 +312,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 sw.WriteLine("Velocidade dos inimigos: " + Enemy.speed);
                 sw.WriteLine("Chances de aparecer plataformas pequenas: " + pequeno);
                 sw.WriteLine("Chances de aparecer plataformas grandes: " + grande);
+                sw.WriteLine("Tem double jump: " + Player.hasDoubleJump);
                 sw.Close();
                 fase++;
             }
@@ -329,6 +330,7 @@ public class ProceduralGenerationScript : MonoBehaviour
                 sw.WriteLine("Velocidade dos inimigos: " + Enemy.speed);
                 sw.WriteLine("Chances de aparecer plataformas pequenas: " + pequeno);
                 sw.WriteLine("Chances de aparecer plataformas grandes: " + grande);
+                sw.WriteLine("Tem double jump: " + Player.hasDoubleJump);
                 sw.Close();
                 fase++;
         }
